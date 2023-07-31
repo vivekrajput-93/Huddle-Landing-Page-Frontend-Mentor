@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@400;600&display=swap');
+
+:root {
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.huddle {
+    height: 100vh;
+    background-image: url("./images//bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Violet);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.left .logo {
+    margin-top: 1rem;
+    width: 30%;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left .mock {
+    width: 85%;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+.right {
+    display: block;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right h1 {
+    width: 60%;
+    margin: 1rem;
+    margin-top: 6rem;
+    margin-left: 2rem;
+    color: white;
+}
+
+.right p {
+    width: 60%;
+    margin: 1rem;
+    margin-left: 2rem;
+    color: white;
+}
+
+.right button {
+    margin-top: .5rem;
+    padding: .8rem 4rem;
+    margin-left: 2rem;
+    border: none;
+    border-radius: 20px;
+    color: var(--Violet);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+}
+
+.right .icons {
+    position: relative;
+    top: 3.2rem;
+    display: flex;
+    margin-left: 28rem;
+    margin-bottom: 1rem;
+    
+}
+
+.icons .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    border-radius: 50%;
+    
+}
+
+@media screen and (max-width:940px) {
+    .huddle {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left .mock {
+        width: 80%;
+    }
+
+    .right {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right .icons {
+        margin-left: 1rem;
+        
+    }
 }
